@@ -14,6 +14,9 @@
 		52CF5EEF2D66F46100EA8D5D /* MaviBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF5EEE2D66F46100EA8D5D /* MaviBankTests.swift */; };
 		52CF5EF92D66F46100EA8D5D /* MaviBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF5EF82D66F46100EA8D5D /* MaviBankUITests.swift */; };
 		52CF5EFB2D66F46100EA8D5D /* MaviBankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF5EFA2D66F46100EA8D5D /* MaviBankUITestsLaunchTests.swift */; };
+		52CF5F092D66F4B700EA8D5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF5F082D66F4B700EA8D5D /* User.swift */; };
+		52CF5F0C2D66F5B100EA8D5D /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF5F0B2D66F5B100EA8D5D /* Bank.swift */; };
+		52CF5F0F2D66FECA00EA8D5D /* BankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF5F0E2D66FECA00EA8D5D /* BankViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		52CF5EF42D66F46100EA8D5D /* MaviBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaviBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CF5EF82D66F46100EA8D5D /* MaviBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaviBankUITests.swift; sourceTree = "<group>"; };
 		52CF5EFA2D66F46100EA8D5D /* MaviBankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaviBankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52CF5F082D66F4B700EA8D5D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52CF5F0B2D66F5B100EA8D5D /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		52CF5F0E2D66FECA00EA8D5D /* BankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,8 @@
 		52CF5EDB2D66F45F00EA8D5D /* MaviBank */ = {
 			isa = PBXGroup;
 			children = (
+				52CF5F0D2D66FEBD00EA8D5D /* ViewModel */,
+				52CF5F072D66F47D00EA8D5D /* Model */,
 				52CF5EDC2D66F45F00EA8D5D /* MaviBankApp.swift */,
 				52CF5EDE2D66F45F00EA8D5D /* ContentView.swift */,
 				52CF5EE02D66F46100EA8D5D /* Assets.xcassets */,
@@ -127,6 +135,23 @@
 				52CF5EFA2D66F46100EA8D5D /* MaviBankUITestsLaunchTests.swift */,
 			);
 			path = MaviBankUITests;
+			sourceTree = "<group>";
+		};
+		52CF5F072D66F47D00EA8D5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52CF5F082D66F4B700EA8D5D /* User.swift */,
+				52CF5F0B2D66F5B100EA8D5D /* Bank.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52CF5F0D2D66FEBD00EA8D5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52CF5F0E2D66FECA00EA8D5D /* BankViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CF5F0F2D66FECA00EA8D5D /* BankViewModel.swift in Sources */,
 				52CF5EDF2D66F45F00EA8D5D /* ContentView.swift in Sources */,
+				52CF5F0C2D66F5B100EA8D5D /* Bank.swift in Sources */,
 				52CF5EDD2D66F45F00EA8D5D /* MaviBankApp.swift in Sources */,
+				52CF5F092D66F4B700EA8D5D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
