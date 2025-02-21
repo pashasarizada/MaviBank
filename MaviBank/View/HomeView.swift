@@ -9,16 +9,15 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @StateObject var bankViewModel = BankViewModel(bankName: "Mavi Bank")
+    @StateObject var bankViewModel = BankViewModel(bankName: "Mavi Bank Panel")
     @State private var showUserAddSheet = false
     @State private var showMoneyTransferSheet = false
 
     var body: some View {
         NavigationView {
             VStack {
-                // Üst Kısım (Banka Adı ve Arkaplan)
                 ZStack(alignment: .leading) {
-                    Color.purple
+                    Color.blue
                         .edgesIgnoringSafeArea(.top)
                         .frame(height: 120)
                     
@@ -30,7 +29,6 @@ struct HomeView: View {
                         .padding(.leading)
                 }
 
-                // Kullanıcı Listesi
                 List(bankViewModel.bank.bankUsers) { user in
                     VStack(alignment: .leading) {
                         Text(user.userName)
@@ -65,7 +63,7 @@ struct HomeView: View {
                     bankViewModel.addUser(name: "Brada", iban: 654321, balance: 2000.0)
                 }
             }
-            .navigationTitle("Home Page")
+            
             .sheet(isPresented: $showUserAddSheet) {
                 AddUserView(bankViewModel: bankViewModel)
             }

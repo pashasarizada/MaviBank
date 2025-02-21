@@ -20,15 +20,15 @@ struct AddUserView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Kullanıcı Bilgileri")) {
-                    TextField("Ad", text: $userName)
+                Section(header: Text("User Info")) {
+                    TextField("Name", text: $userName)
                     TextField("IBAN", text: $userIban)
                         .keyboardType(.numberPad)
-                    TextField("Başlangıç Bakiyesi", text: $userBalance)
+                    TextField("Inital Balance", text: $userBalance)
                         .keyboardType(.decimalPad)
                 }
                 
-                Button("Ekle") {
+                Button("Add") {
                     if let iban = Int(userIban), let balance = Double(userBalance) {
                         bankViewModel.addUser(name: userName, iban: iban, balance: balance)
                         presentationMode.wrappedValue.dismiss()
@@ -36,7 +36,7 @@ struct AddUserView: View {
                 }
                 .disabled(userName.isEmpty || userIban.isEmpty || userBalance.isEmpty)
             }
-            .navigationTitle("Kullanıcı Ekle")
+            .navigationTitle("Add User")
         }
     }
 }
